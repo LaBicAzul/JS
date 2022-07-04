@@ -1,0 +1,186 @@
+html{
+    box-sizing: border-box;
+}
+
+*{
+    /*hereda el valor de html (linea 1)*/
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 0;
+    
+}
+
+main{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.titulos{
+    font-family: 'Ubuntu', sans-serif;
+    margin-bottom: 15px;
+}
+
+h1{
+    display: block;
+    text-align: center;
+    width: 100%;
+    
+    
+}
+
+.desplegable{
+    display: block;
+    width: 100%;
+    height: 120px;
+    border: 1px solid black;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    scroll-behavior: smooth;
+}
+
+.desplegable::-webkit-scrollbar{
+    width: 10px;
+}
+
+.desplegable::-webkit-scrollbar-thumb{
+    background-color: grey;
+    border-radius: 5px;
+}
+
+.items{
+    width: 1fr;
+    height: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.174);
+}
+
+.desplegable ul{
+    list-style: none;
+}
+
+.desplegable li{
+    width: 1fr;
+    height: 30px;
+    border: 0.1px solid black;   
+}
+
+.desplegable a{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    height: 100%;
+    margin-left: 15px;
+    padding-top: 5px;
+   
+}
+
+/*--------------------
+hasta aca menu desplegable
+---------------------*/
+
+.secciones{
+    width: 80%;
+    text-align: center;
+    line-height: 1.3rem;
+    margin: 10px auto 40px;/*20px auto no me funciona*/
+}
+
+.ul-secciones{
+    text-align:start
+}
+
+.caja{
+    background-color: rgba(128, 128, 128, 0.224);
+    border-radius: 5px;
+    margin: 10px auto;
+    padding: 10px;
+    line-height: 1.2rem;
+    height: auto;
+    /*corta texto para no salir del contenedor*/
+    word-wrap: break-word;
+    font-size: 0.8rem;
+}
+
+.li-tipos{
+   text-align:justify;
+/*hace el circulo normal de los items*/
+   list-style-type: disc;
+   margin-left: 20px;
+}
+
+.tipos-disc{
+    text-align: left;
+/*deja vacio por dentro el circulo de los items*/
+    list-style-type: circle;
+    margin-left: 40px;
+}
+
+#mdn{
+    font-family: 'Kanit', sans-serif;
+    text-decoration: none;
+    color: black;
+    background-color: rgba(127, 255, 212, 0.441);
+    border-radius: 5px;
+}
+
+@media(min-width:768px){
+
+    nav{
+        width: 300px;
+        height: 100vh;
+        
+        display: inline-block;
+/*sin absolute no podia poner tl texto al lado*/
+        position: fixed;
+    }
+
+    .desplegable{
+        height: 88vh;
+
+    }
+
+    .desplegable li{
+        height: 50px;
+        font-size: 1.2rem;
+        
+        padding-top: 10px;
+    }
+
+    h1{
+        font-size: 1.8rem;
+        line-height: 2;
+       
+    }
+
+    main{
+        margin-left: 380px;
+        margin-right: 30px;
+        max-width: 1440px;
+        display: inline-block;
+    }
+
+    .secciones{
+        margin-left: 0;
+        padding-left: 0;
+        
+        width: 70%;
+        max-width: 750px;
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+        margin-top: 30px;
+        text-align: center;
+    }
+}
+
+   
+
+
+
+    
